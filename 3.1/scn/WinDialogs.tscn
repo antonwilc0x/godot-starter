@@ -1,0 +1,156 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/WinDialogs.gd" type="Script" id=1]
+
+[node name="WinDialogs" type="Control"]
+script = ExtResource( 1 )
+
+[node name="PauseWin" type="PopupDialog" parent="."]
+pause_mode = 2
+editor/display_folded = true
+margin_left = 430.0
+margin_top = 200.0
+margin_right = 606.0
+margin_bottom = 314.0
+
+[node name="PauseVbox" type="VBoxContainer" parent="PauseWin"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="PauseLbl" type="Label" parent="PauseWin/PauseVbox"]
+margin_right = 156.0
+margin_bottom = 14.0
+text = "KPUS"
+align = 1
+
+[node name="SettingsBtn" type="Button" parent="PauseWin/PauseVbox"]
+margin_top = 18.0
+margin_right = 156.0
+margin_bottom = 38.0
+text = "KSET"
+
+[node name="ResumeBtn" type="Button" parent="PauseWin/PauseVbox"]
+margin_top = 42.0
+margin_right = 156.0
+margin_bottom = 62.0
+text = "KRUS"
+
+[node name="ExitBtn" type="Button" parent="PauseWin/PauseVbox"]
+margin_top = 66.0
+margin_right = 156.0
+margin_bottom = 86.0
+text = "KEXT"
+
+[node name="CreditsWin" type="AcceptDialog" parent="."]
+editor/display_folded = true
+margin_left = 404.0
+margin_top = 158.0
+margin_right = 752.0
+margin_bottom = 425.0
+window_title = "KCRE"
+
+[node name="CreditsTxt" type="RichTextLabel" parent="CreditsWin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 340.0
+margin_bottom = 231.0
+focus_mode = 2
+bbcode_enabled = true
+bbcode_text = "[center]Created by
+Anthony Wilcox
+[/center]"
+text = "Created by
+Anthony Wilcox
+"
+selection_enabled = true
+
+[node name="SettingsWin" type="AcceptDialog" parent="."]
+pause_mode = 2
+editor/display_folded = true
+margin_left = 504.0
+margin_top = 264.0
+margin_right = 656.0
+margin_bottom = 332.0
+window_title = "KSET"
+
+[node name="Grid" type="GridContainer" parent="SettingsWin"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -68.0
+margin_top = -26.0
+margin_right = 68.0
+margin_bottom = -2.0
+columns = 3
+
+[node name="LicenseWin" type="AcceptDialog" parent="."]
+editor/display_folded = true
+margin_left = 278.0
+margin_top = 159.0
+margin_right = 745.0
+margin_bottom = 431.0
+window_title = "KLIC"
+
+[node name="LicenseTxt" type="RichTextLabel" parent="LicenseWin"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 459.0
+margin_bottom = 236.0
+bbcode_enabled = true
+bbcode_text = "This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>"
+text = "This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>"
+
+[connection signal="pressed" from="PauseWin/PauseVbox/SettingsBtn" to="." method="_on_SettingsBtn_pressed"]
+[connection signal="pressed" from="PauseWin/PauseVbox/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
+[connection signal="pressed" from="PauseWin/PauseVbox/ExitBtn" to="." method="_on_ExitBtn_pressed"]
