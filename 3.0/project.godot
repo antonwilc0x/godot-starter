@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Anthony's Godot Template"
+config/name="Anthony's Godot 3.0 Template"
 run/main_scene="res://scn/TitleScn.tscn"
 
 [autoload]
