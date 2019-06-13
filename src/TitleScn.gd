@@ -1,10 +1,10 @@
-extends "res://src/GameKit.gd"
+extends Node
 
 func _on_PlayBtn_pressed():
-	switch_scenes("game")
+	GameKit.switch_scenes("game")
 
 func _on_LicenseBtn_pressed():
-	$WinDialogs/LicenseWin.show()
+	$PauseScn/LicenseWin.show()
 
 func _on_CreditsBtn_pressed():
-	$WinDialogs/CreditsWin.show()
+	$PauseScn/CreditsWin.show()

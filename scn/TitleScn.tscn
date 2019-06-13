@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/TitleScn.gd" type="Script" id=1]
-[ext_resource path="res://scn/WinDialogs.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scn/PauseScn.tscn" type="PackedScene" id=2]
 
 [node name="TitleScn" type="Node"]
 script = ExtResource( 1 )
@@ -30,8 +30,7 @@ margin_right = 147.0
 margin_bottom = 68.0
 text = "KLIC"
 
-[node name="WinDialogs" parent="." instance=ExtResource( 2 )]
-
+[node name="PauseScn" parent="." instance=ExtResource( 2 )]
 [connection signal="pressed" from="TitleVBox/PlayBtn" to="." method="_on_PlayBtn_pressed"]
 [connection signal="pressed" from="TitleVBox/CreditsBtn" to="." method="_on_CreditsBtn_pressed"]
 [connection signal="pressed" from="TitleVBox/LicenseBtn" to="." method="_on_LicenseBtn_pressed"]

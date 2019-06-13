@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://src/WinDialogs.gd" type="Script" id=1]
+[ext_resource path="res://src/PauseScn.gd" type="Script" id=1]
 
-[node name="WinDialogs" type="Control"]
+[node name="PauseScn" type="Control"]
 script = ExtResource( 1 )
 
 [node name="PauseWin" type="PopupDialog" parent="."]
@@ -63,8 +63,7 @@ bbcode_enabled = true
 bbcode_text = "[center]Created by
 Anthony Wilcox
 [/center]"
-text = "Created by
-Anthony Wilcox
+text = "
 "
 selection_enabled = true
 
@@ -150,7 +149,6 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org>"
-
 [connection signal="pressed" from="PauseWin/PauseVbox/SettingsBtn" to="." method="_on_SettingsBtn_pressed"]
 [connection signal="pressed" from="PauseWin/PauseVbox/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
 [connection signal="pressed" from="PauseWin/PauseVbox/ExitBtn" to="." method="_on_ExitBtn_pressed"]

@@ -21,7 +21,6 @@ run/main_scene="res://scn/TitleScn.tscn"
 [autoload]
 
 GameKit="*res://src/GameKit.gd"
-WinDialogs="*res://scn/WinDialogs.tscn"
 
 [display]
 

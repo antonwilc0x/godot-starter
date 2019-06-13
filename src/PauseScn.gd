@@ -1,8 +1,8 @@
-extends "res://src/GameKit.gd"
+extends Control
 
 func _on_ExitBtn_pressed():
-	is_game_paused(false)
-	switch_scenes("title")
+	GameKit.is_game_paused(false)
+	GameKit.switch_scenes("title")
 
 func _on_SettingsBtn_pressed():
 	$SettingsWin.show()
@@ -18,4 +18,4 @@ func _on_CloseAbtBtn_pressed():
 
 func _on_ResumeBtn_pressed():
 	$PauseWin.hide()
-	is_game_paused(false)
+	GameKit.is_game_paused(false)
