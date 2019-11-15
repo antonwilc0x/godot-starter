@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Anthony's Godot 3.1 Template"
+config/name="Godot 3.1 Starter"
 run/main_scene="res://scn/TitleScn.tscn"
 
 [autoload]
