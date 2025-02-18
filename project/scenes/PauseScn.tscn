@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://baomgr7v1oi8q"]
+
+[ext_resource type="Script" path="res://source/PauseScn.gd" id="1"]
+
+[node name="PauseScn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseWin" type="Window" parent="."]
+title = "Pause"
+position = Vector2i(0, 36)
+size = Vector2i(150, 150)
+visible = false
+
+[node name="PauseVbox" type="VBoxContainer" parent="PauseWin"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -70.0
+offset_right = 108.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ResumeBtn" type="Button" parent="PauseWin/PauseVbox"]
+layout_mode = 2
+text = "Resume"
+
+[node name="ExitBtn" type="Button" parent="PauseWin/PauseVbox"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="close_requested" from="PauseWin" to="." method="_on_pause_win_close_requested"]
+[connection signal="pressed" from="PauseWin/PauseVbox/ResumeBtn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="PauseWin/PauseVbox/ExitBtn" to="." method="_on_exit_btn_pressed"]

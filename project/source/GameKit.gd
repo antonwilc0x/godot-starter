@@ -10,6 +10,6 @@ func is_game_paused(is_paused):
 
 func switch_scenes(is_mode):
 	if is_mode == "title":
-		get_tree().change_scene("res://scn/TitleScn.tscn")
+		get_tree().change_scene_to_file("res://scenes/TitleScn.tscn")
 	elif is_mode == "game":
-		get_tree().change_scene("res://scn/GameScn.tscn")
+		get_tree().change_scene_to_file("res://scenes/GameScn.tscn")
